@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { QUESTIONS, TOTAL_QUESTIONS } from "@/lib/questions";
+import SubscribeStep from "./SubscribeStep";
 
 type Answers = Record<string, string | string[]>;
 type Draft = { answers: Answers; currentIndex: number; updatedAt: number };
@@ -20,6 +21,10 @@ export default function Survey() {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [hydrated, setHydrated] = useState(false);
+  const [postSubmit, setPostSubmit] = useState<{
+    id: string | null;
+    email: string;
+  } | null>(null);
   const honeypotRef = useRef<HTMLInputElement>(null);
   const advanceTimerRef = useRef<number | null>(null);
   const stashedDraftRef = useRef<Draft | null>(null);
@@ -88,35 +93,46 @@ export default function Survey() {
     setShowResumePrompt(false);
   };
 
-  const submit = useCallback(async (finalAnswers: Answers) => {
-    setSubmitting(true);
-    setSubmitError(null);
-    const honeypot = honeypotRef.current?.value ?? "";
-    try {
-      const res = await fetch("/api/submit", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({
-          ...finalAnswers,
-          website: honeypot,
-          _startedAt: startedAt,
-        }),
-      });
-      if (!res.ok) {
-        const data = (await res.json().catch(() => ({}))) as { error?: string };
-        throw new Error(data.error ?? "Submission failed");
-      }
+  const submit = useCallback(
+    async (finalAnswers: Answers) => {
+      setSubmitting(true);
+      setSubmitError(null);
+      const honeypot = honeypotRef.current?.value ?? "";
       try {
-        localStorage.removeItem(DRAFT_KEY);
-      } catch {
-        /* noop */
+        const res = await fetch("/api/submit", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({
+            ...finalAnswers,
+            website: honeypot,
+            _startedAt: startedAt,
+          }),
+        });
+        const data = (await res.json().catch(() => ({}))) as {
+          ok?: boolean;
+          id?: string | null;
+          error?: string;
+        };
+        if (!res.ok) {
+          throw new Error(data.error ?? "Submission failed");
+        }
+        try {
+          localStorage.removeItem(DRAFT_KEY);
+        } catch {
+          /* noop */
+        }
+        const givenEmail =
+          typeof finalAnswers.email === "string" ? finalAnswers.email.trim() : "";
+        setPostSubmit({ id: data.id ?? null, email: givenEmail });
+      } catch (e) {
+        setSubmitError(
+          e instanceof Error ? e.message : "Something went wrong. Try again.",
+        );
+        setSubmitting(false);
       }
-      router.push("/thanks");
-    } catch (e) {
-      setSubmitError(e instanceof Error ? e.message : "Something went wrong. Try again.");
-      setSubmitting(false);
-    }
-  }, [router, startedAt]);
+    },
+    [startedAt],
+  );
 
   const goNext = useCallback(() => {
     clearTimer();
@@ -174,6 +190,16 @@ export default function Survey() {
   }, [currentIndex, canContinue, goNext, q.type, showResumePrompt, submitting]);
 
   const skip = () => goNext();
+
+  if (postSubmit) {
+    return (
+      <SubscribeStep
+        surveyResponseId={postSubmit.id}
+        initialEmail={postSubmit.email}
+        onDone={() => router.push("/thanks")}
+      />
+    );
+  }
 
   return (
     <main className="min-h-screen flex flex-col">

@@ -83,17 +83,23 @@ export async function POST(req: NextRequest) {
     referrer: referrer,
   };
 
+  let insertedId: string | null = null;
   try {
     const supabase = getSupabaseServer();
-    const { error } = await supabase.from("survey_responses").insert(row);
+    const { data, error } = await supabase
+      .from("survey_responses")
+      .insert(row)
+      .select("id")
+      .single();
     if (error) {
       console.error("Insert error:", error);
       return NextResponse.json({ error: "Failed to save" }, { status: 500 });
     }
+    insertedId = data?.id ?? null;
   } catch (e) {
     console.error("Handler error:", e);
     return NextResponse.json({ error: "Server misconfigured" }, { status: 500 });
   }
 
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({ ok: true, id: insertedId });
 }
