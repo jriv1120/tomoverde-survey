@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import AgeGate from "@/components/AgeGate";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -43,6 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
       <body className="min-h-screen bg-forest-deep text-cream antialiased">
         {children}
+        <AgeGate />
         <Analytics />
       </body>
     </html>
