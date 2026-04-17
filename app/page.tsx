@@ -1,20 +1,22 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
-      <header className="px-6 pt-10 sm:px-10 sm:pt-12">
-        <div className="flex items-center gap-2.5">
-          <span
-            aria-hidden
-            className="inline-block w-2.5 h-2.5 rounded-full bg-glow animate-breathe"
-          />
-          <span className="font-serif text-xl tracking-tight text-cream">Tomoverde</span>
-        </div>
-      </header>
-
-      <div className="flex-1 flex items-center justify-center px-6 sm:px-10">
+      <div className="flex-1 flex items-center justify-center px-6 sm:px-10 py-16">
         <div className="max-w-2xl w-full text-center animate-settle">
+          <div className="mx-auto mb-10 sm:mb-12 rounded-[28px] bg-cream p-5 sm:p-7 w-[220px] sm:w-[280px] shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)]">
+            <Image
+              src="/logo.png"
+              alt="Tomoverde — where connection grows"
+              width={560}
+              height={560}
+              priority
+              className="w-full h-auto"
+            />
+          </div>
+
           <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl font-light leading-[1.05] tracking-tight text-cream">
             Tell us what you{" "}
             <em className="text-glow not-italic font-serif italic">actually</em> want.
@@ -45,7 +47,7 @@ export default function Home() {
       </div>
 
       <footer className="px-6 pb-10 sm:px-10 text-center text-xs text-text-muted/50">
-        Tomoverde · New Jersey
+        Where connection grows · New Jersey
       </footer>
     </main>
   );
