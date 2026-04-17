@@ -2,6 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import { getSupabaseServer } from "@/lib/supabase-server";
 import { getResend, RESEND_CONFIG } from "@/lib/resend";
 import { welcomeEmailHtml, welcomeEmailText } from "@/lib/emails/welcome";
+import {
+  adminNotificationHtml,
+  adminNotificationSubject,
+  adminNotificationText,
+} from "@/lib/emails/admin-notification";
+
+const ADMIN_EMAIL = "jriv1120@gmail.com";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -98,6 +105,7 @@ export async function POST(req: NextRequest) {
   if (resend) {
     const tasks: Promise<unknown>[] = [];
 
+    // Welcome email to the subscriber
     tasks.push(
       resend.emails.send({
         from: RESEND_CONFIG.from,
@@ -110,6 +118,26 @@ export async function POST(req: NextRequest) {
           "List-Unsubscribe": "<{{RESEND_UNSUBSCRIBE_URL}}>",
           "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
         },
+      }),
+    );
+
+    // Admin notification to Jorge — every new subscriber
+    tasks.push(
+      resend.emails.send({
+        from: RESEND_CONFIG.from,
+        to: ADMIN_EMAIL,
+        replyTo: RESEND_CONFIG.replyTo,
+        subject: adminNotificationSubject(cleanEmail),
+        html: adminNotificationHtml({
+          email: cleanEmail,
+          firstName: cleanFirstName,
+          surveyResponseId: cleanSurveyId,
+        }),
+        text: adminNotificationText({
+          email: cleanEmail,
+          firstName: cleanFirstName,
+          surveyResponseId: cleanSurveyId,
+        }),
       }),
     );
 
