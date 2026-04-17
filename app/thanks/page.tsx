@@ -49,12 +49,12 @@ export default function Thanks() {
             <p className="text-xs text-text-muted/70 uppercase tracking-[0.25em]">Pass it on</p>
             <div className="flex flex-wrap items-center justify-center gap-3">
               <a
-                href="https://www.instagram.com/tomoverde"
+                href="https://www.instagram.com/tomoverde.io"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full border border-fern/40 hover:border-glow/60 hover:bg-moss/40 transition-all duration-500 px-5 py-2.5 text-sm text-cream"
               >
-                @tomoverde on IG
+                @tomoverde.io on IG
               </a>
               <a
                 href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
@@ -86,7 +86,7 @@ export default function Thanks() {
 
           <div className="mt-16">
             <Link
-              href="https://www.instagram.com/tomoverde"
+              href="https://www.instagram.com/tomoverde.io"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-glow hover:text-cream transition-colors underline underline-offset-4 decoration-glow/40"
