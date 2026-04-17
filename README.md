@@ -52,3 +52,8 @@ Partial responses are saved to `localStorage` under `tomoverde_survey_draft_v1` 
 ## Deploy
 
 Pushes to `main` auto-deploy via Vercel. Env vars must be set in the Vercel project settings.
+
+## Live
+
+Deployed: https://tomoverde-survey.vercel.app  
+Repo: https://github.com/jriv1120/tomoverde-survey
