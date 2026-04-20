@@ -6,14 +6,22 @@ export default function Home() {
     <main className="min-h-screen flex flex-col">
       <div className="flex-1 flex items-center justify-center px-6 sm:px-10 py-16">
         <div className="max-w-2xl w-full text-center animate-settle">
-          <div className="mx-auto mb-10 sm:mb-12 rounded-[28px] bg-cream p-5 sm:p-7 w-[220px] sm:w-[280px] shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)]">
+          <div className="mx-auto mb-6 sm:mb-8 relative w-[240px] sm:w-[300px] aspect-square flex items-center justify-center">
+            <div
+              aria-hidden
+              className="absolute -inset-[28%] pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(circle, rgba(244,237,224,0.92) 0%, rgba(244,237,224,0.62) 28%, rgba(244,237,224,0.24) 50%, rgba(244,237,224,0.06) 68%, transparent 82%)",
+              }}
+            />
             <Image
               src="/logo.png"
               alt="Tomoverde — where connection grows"
               width={560}
               height={560}
               priority
-              className="w-full h-auto"
+              className="relative w-full h-auto"
             />
           </div>
 
