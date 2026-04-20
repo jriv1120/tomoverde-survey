@@ -1,22 +1,22 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
-      <header className="px-6 pt-10 sm:px-10 sm:pt-12">
-        <div className="flex items-center gap-2.5">
-          <span
-            aria-hidden
-            className="inline-block w-2.5 h-2.5 rounded-full bg-glow animate-breathe"
-          />
-          <span className="font-serif text-xl tracking-tight text-cream">
-            Tomoverde
-          </span>
-        </div>
-      </header>
-
-      <div className="flex-1 flex items-center justify-center px-6 sm:px-10">
+      <div className="flex-1 flex items-center justify-center px-6 sm:px-10 py-14">
         <div className="max-w-2xl w-full text-center animate-settle">
+          <div className="mx-auto mb-8 sm:mb-10 w-[150px] sm:w-[180px]">
+            <Image
+              src="/logo-mark-cream.png"
+              alt="Tomoverde"
+              width={760}
+              height={580}
+              priority
+              className="w-full h-auto opacity-95"
+            />
+          </div>
+
           <p className="font-serif italic text-base sm:text-lg text-text-muted mb-8 sm:mb-10 tracking-wide">
             Where connection grows.
           </p>
