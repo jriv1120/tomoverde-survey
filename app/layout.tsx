@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
-      <body className="min-h-screen bg-forest-deep text-cream antialiased">
+      <body className="min-h-screen bg-cream text-ink antialiased">
         {children}
         <AgeGate />
         <Analytics />

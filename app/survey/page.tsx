@@ -204,9 +204,9 @@ export default function Survey() {
 
   return (
     <main className="min-h-screen flex flex-col">
-      <div className="fixed top-0 inset-x-0 z-20 h-[3px] bg-forest/60">
+      <div className="fixed top-0 inset-x-0 z-20 h-[3px] bg-sage/20">
         <div
-          className="h-full bg-glow shadow-[0_0_12px_rgba(143,217,168,0.8)] transition-[width] duration-700 ease-out"
+          className="h-full bg-forest transition-[width] duration-700 ease-out"
           style={{ width: `${progress}%` }}
           role="progressbar"
           aria-valuenow={currentIndex + 1}
@@ -219,40 +219,40 @@ export default function Survey() {
       <header className="px-6 pt-10 sm:px-10 sm:pt-12 flex items-center justify-between">
         <Link href="/" className="inline-flex items-center gap-2.5">
           <Image
-            src="/logo-mark-cream.png"
+            src="/logo-mark-dark.png"
             alt=""
             width={760}
             height={580}
-            className="w-7 h-auto opacity-95"
+            className="w-7 h-auto"
           />
-          <span className="font-serif text-xl tracking-tight text-cream">Tomoverde</span>
+          <span className="font-serif text-xl tracking-tight text-forest">Tomoverde</span>
         </Link>
-        <span className="text-sm text-text-muted tabular-nums">
+        <span className="text-sm text-ink-muted tabular-nums">
           {currentIndex + 1} / {TOTAL_QUESTIONS}
         </span>
       </header>
 
       {showResumePrompt && (
         <div
-          className="fixed inset-0 z-30 flex items-center justify-center bg-forest-deep/90 backdrop-blur-sm px-6"
+          className="fixed inset-0 z-30 flex items-center justify-center bg-ink/60 backdrop-blur-sm px-6"
           role="dialog"
           aria-modal="true"
         >
-          <div className="max-w-sm w-full rounded-2xl bg-card border border-fern/30 p-8 animate-settle shadow-2xl shadow-black/50">
-            <h2 className="font-serif text-2xl text-cream font-light">
+          <div className="max-w-sm w-full rounded-2xl bg-cream border border-sage/40 p-8 animate-settle shadow-2xl shadow-ink/30">
+            <h2 className="font-serif text-2xl text-ink font-light">
               Pick up where you left off?
             </h2>
-            <p className="mt-3 text-sm text-text-muted">We saved your progress on this device.</p>
+            <p className="mt-3 text-sm text-ink-muted">We saved your progress on this device.</p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <button
                 onClick={resumeDraft}
-                className="flex-1 rounded-full bg-moss hover:bg-fern transition-colors duration-500 px-5 py-3 text-cream font-medium"
+                className="flex-1 rounded-full bg-forest hover:bg-ink transition-colors duration-500 px-5 py-3 text-cream font-medium"
               >
                 Yes, continue
               </button>
               <button
                 onClick={startFresh}
-                className="flex-1 rounded-full border border-fern/40 hover:border-glow/60 px-5 py-3 text-cream transition-colors duration-500"
+                className="flex-1 rounded-full border border-sage/60 hover:border-forest px-5 py-3 text-ink transition-colors duration-500"
               >
                 Start over
               </button>
@@ -263,14 +263,14 @@ export default function Survey() {
 
       <div className="flex-1 flex items-center justify-center px-6 sm:px-10 py-12">
         <div key={currentIndex} className="max-w-2xl w-full animate-settle">
-          <p className="text-xs uppercase tracking-[0.25em] text-text-muted/70">
+          <p className="text-xs uppercase tracking-[0.25em] text-ink-muted">
             Question {q.number}
-            {q.optional && <span className="ml-2 text-terracotta">· optional</span>}
+            {q.optional && <span className="ml-2 text-tobacco">· optional</span>}
           </p>
-          <h1 className="mt-4 font-serif text-3xl sm:text-4xl md:text-5xl font-light leading-[1.15] tracking-tight text-cream">
+          <h1 className="mt-4 font-serif text-3xl sm:text-4xl md:text-5xl font-light leading-[1.15] tracking-tight text-ink">
             {q.prompt}
           </h1>
-          {q.subtitle && <p className="mt-3 text-base text-text-muted">{q.subtitle}</p>}
+          {q.subtitle && <p className="mt-3 text-base text-ink-muted">{q.subtitle}</p>}
 
           <div className="mt-10">
             {q.type === "single" && (
@@ -286,8 +286,8 @@ export default function Survey() {
                       onClick={() => pickSingle(opt)}
                       className={`text-left rounded-2xl border px-6 py-4 transition-all duration-500 ease-out ${
                         selected
-                          ? "border-glow/70 bg-moss text-cream shadow-[0_0_24px_rgba(143,217,168,0.15)]"
-                          : "border-fern/25 hover:border-fern/60 bg-card/40 hover:bg-card/70 text-cream"
+                          ? "border-forest bg-forest text-cream shadow-lg shadow-forest/20"
+                          : "border-sage/40 hover:border-forest/60 bg-cream-warm hover:bg-cream-warm/70 text-ink"
                       }`}
                     >
                       {opt}
@@ -310,8 +310,8 @@ export default function Survey() {
                       onClick={() => toggleMulti(opt)}
                       className={`rounded-full border px-5 py-3 text-sm transition-all duration-500 ease-out ${
                         selected
-                          ? "border-glow/70 bg-moss text-cream shadow-[0_0_18px_rgba(143,217,168,0.18)]"
-                          : "border-fern/25 hover:border-fern/60 bg-card/30 hover:bg-card/60 text-cream"
+                          ? "border-forest bg-forest text-cream shadow-md shadow-forest/20"
+                          : "border-sage/40 hover:border-forest/60 bg-cream-warm/60 hover:bg-cream-warm text-ink"
                       }`}
                     >
                       {opt}
@@ -329,7 +329,7 @@ export default function Survey() {
                 rows={6}
                 placeholder={q.placeholder}
                 aria-label={q.prompt}
-                className="w-full rounded-2xl border border-fern/25 bg-card/30 p-5 text-cream placeholder:text-text-muted/50 focus:border-glow/60 focus:outline-none transition-colors duration-500 resize-none text-base leading-relaxed"
+                className="w-full rounded-2xl border border-sage/40 bg-cream-warm/70 p-5 text-ink placeholder:text-ink-muted focus:border-forest focus:outline-none transition-colors duration-500 resize-none text-base leading-relaxed"
               />
             )}
 
@@ -342,7 +342,7 @@ export default function Survey() {
                 maxLength={q.column === "email" ? 320 : 20}
                 placeholder={q.placeholder}
                 aria-label={q.prompt}
-                className="w-full rounded-2xl border border-fern/25 bg-card/30 px-5 py-4 text-cream placeholder:text-text-muted/40 focus:border-glow/60 focus:outline-none transition-colors duration-500 text-base"
+                className="w-full rounded-2xl border border-sage/40 bg-cream-warm/70 px-5 py-4 text-ink placeholder:text-ink-muted focus:border-forest focus:outline-none transition-colors duration-500 text-base"
               />
             )}
           </div>
@@ -352,7 +352,7 @@ export default function Survey() {
               type="button"
               onClick={goBack}
               disabled={currentIndex === 0 || submitting}
-              className="text-sm text-text-muted hover:text-cream transition-colors disabled:opacity-0 disabled:pointer-events-none"
+              className="text-sm text-ink-muted hover:text-ink transition-colors disabled:opacity-0 disabled:pointer-events-none"
             >
               ← Back
             </button>
@@ -362,7 +362,7 @@ export default function Survey() {
                 <button
                   type="button"
                   onClick={skip}
-                  className="text-sm text-text-muted hover:text-cream transition-colors"
+                  className="text-sm text-ink-muted hover:text-ink transition-colors"
                   disabled={submitting}
                 >
                   Skip
@@ -373,7 +373,7 @@ export default function Survey() {
                   type="button"
                   onClick={goNext}
                   disabled={!canContinue() || submitting}
-                  className="rounded-full bg-moss hover:bg-fern transition-colors duration-500 px-7 py-3 text-cream font-medium disabled:opacity-40 disabled:pointer-events-none"
+                  className="rounded-full bg-forest hover:bg-ink transition-colors duration-500 px-7 py-3 text-cream font-medium disabled:opacity-40 disabled:pointer-events-none"
                 >
                   {currentIndex === TOTAL_QUESTIONS - 1
                     ? submitting
@@ -386,7 +386,7 @@ export default function Survey() {
           </div>
 
           {submitError && (
-            <p className="mt-4 text-sm text-terracotta" role="alert">
+            <p className="mt-4 text-sm text-tobacco" role="alert">
               {submitError}
             </p>
           )}

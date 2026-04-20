@@ -1,44 +1,58 @@
 @import "tailwindcss";
 
 @theme {
-  --color-forest-deep: #0F1E17;
-  --color-forest: #1A2E24;
-  --color-card: #22362B;
-  --color-moss: #2D4A3A;
-  --color-fern: #4A7C5C;
-  --color-glow: #8FD9A8;
-  --color-terracotta: #C17A5B;
-  --color-cream: #F4EDE0;
-  --color-amber: #B8935A;
-  --color-text-muted: #B8C5BC;
+  /* Primary palette — cream-forward botanical (matches tomoverde-partners) */
+  --color-cream: #f2ecde;          /* main background */
+  --color-cream-warm: #ebe3d0;     /* card / alt surface */
+  --color-ink: #1f1c18;            /* primary text */
+  --color-ink-muted: #a49f94;      /* secondary text */
 
+  /* Greens */
+  --color-forest: #2e3a2a;         /* primary green (buttons, strong accents) */
+  --color-moss: #3a4836;           /* secondary green */
+  --color-sage: #8fa384;           /* soft green (borders, subtle accents) */
+
+  /* Warm */
+  --color-tobacco: #6b4f3a;        /* warm brown accent */
+
+  /* Legacy aliases — remapped to new palette so existing class names still work */
+  --color-forest-deep: #2e3a2a;
+  --color-card: #ebe3d0;
+  --color-fern: #8fa384;
+  --color-glow: #6b4f3a;
+  --color-terracotta: #6b4f3a;
+  --color-text-muted: #a49f94;
+  --color-amber: #6b4f3a;
+
+  /* Fonts */
   --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html,
 body {
-  background-color: #0F1E17;
-  color: #F4EDE0;
+  background-color: #f2ecde;
+  color: #1f1c18;
 }
 
 body {
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: rgba(143, 217, 168, 0.3);
-  color: #F4EDE0;
+  background: rgba(46, 58, 42, 0.18);
+  color: #1f1c18;
 }
 
 :focus-visible {
-  outline: 2px solid #8FD9A8;
+  outline: 2px solid #2e3a2a;
   outline-offset: 3px;
   border-radius: 6px;
 }

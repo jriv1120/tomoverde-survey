@@ -17,36 +17,30 @@ export default async function OG() {
           justifyContent: "center",
           alignItems: "flex-start",
           background:
-            "linear-gradient(135deg, #0F1E17 0%, #1A2E24 55%, #22362B 100%)",
+            "linear-gradient(135deg, #f2ecde 0%, #ebe3d0 55%, #e0d6bc 100%)",
           padding: "80px",
-          color: "#F4EDE0",
+          color: "#1f1c18",
         }}
       >
         <div
           style={{
             display: "flex",
             alignItems: "center",
-            gap: 16,
+            gap: 14,
             marginBottom: 40,
           }}
         >
           <div
             style={{
-              width: 14,
-              height: 14,
-              borderRadius: 7,
-              background: "#8FD9A8",
-            }}
-          />
-          <span
-            style={{
-              fontSize: 32,
-              letterSpacing: -0.5,
-              fontFamily: "Georgia, serif",
+              fontSize: 28,
+              letterSpacing: 6,
+              textTransform: "uppercase",
+              color: "#2e3a2a",
+              fontWeight: 600,
             }}
           >
             Tomoverde
-          </span>
+          </div>
         </div>
 
         <div
@@ -61,7 +55,7 @@ export default async function OG() {
           }}
         >
           <span>Tell us what you&nbsp;</span>
-          <span style={{ color: "#8FD9A8", fontStyle: "italic" }}>actually&nbsp;</span>
+          <span style={{ color: "#2e3a2a", fontStyle: "italic" }}>actually&nbsp;</span>
           <span>want.</span>
         </div>
 
@@ -69,12 +63,13 @@ export default async function OG() {
           style={{
             marginTop: 48,
             fontSize: 28,
-            color: "#B8C5BC",
+            color: "#6b4f3a",
             maxWidth: 900,
             lineHeight: 1.4,
+            fontStyle: "italic",
           }}
         >
-          A cannabis community that feels like coming home, not a transaction.
+          Where connection grows.
         </div>
       </div>
     ),

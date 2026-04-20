@@ -61,13 +61,13 @@ export default function SubscribeStep({ surveyResponseId, initialEmail, onDone }
       <header className="px-6 pt-10 sm:px-10 sm:pt-12">
         <Link href="/" className="inline-flex items-center gap-2.5">
           <Image
-            src="/logo-mark-cream.png"
+            src="/logo-mark-dark.png"
             alt=""
             width={760}
             height={580}
-            className="w-7 h-auto opacity-95"
+            className="w-7 h-auto"
           />
-          <span className="font-serif text-xl tracking-tight text-cream">Tomoverde</span>
+          <span className="font-serif text-xl tracking-tight text-forest">Tomoverde</span>
         </Link>
       </header>
 
@@ -75,30 +75,30 @@ export default function SubscribeStep({ surveyResponseId, initialEmail, onDone }
         <div className="max-w-xl w-full animate-settle">
           {done ? (
             <div className="text-center">
-              <p className="text-xs uppercase tracking-[0.25em] text-glow">Welcome home</p>
-              <h1 className="mt-4 font-serif text-4xl sm:text-5xl font-light leading-[1.1] tracking-tight text-cream">
+              <p className="text-xs uppercase tracking-[0.25em] text-forest">Welcome home</p>
+              <h1 className="mt-4 font-serif text-4xl sm:text-5xl font-light leading-[1.1] tracking-tight text-ink">
                 You&rsquo;re in. 🌱
               </h1>
-              <p className="mt-6 text-lg text-text-muted leading-relaxed">
+              <p className="mt-6 text-lg text-ink-muted leading-relaxed">
                 Check your inbox — a welcome note is on its way.
               </p>
               <button
                 type="button"
                 onClick={onDone}
-                className="mt-10 rounded-full bg-moss hover:bg-fern transition-colors duration-500 ease-out px-9 py-4 text-cream font-medium shadow-lg shadow-black/30"
+                className="mt-10 rounded-full bg-forest hover:bg-ink transition-colors duration-500 ease-out px-9 py-4 text-cream font-medium shadow-lg shadow-forest/20"
               >
                 Finish
               </button>
             </div>
           ) : (
             <>
-              <p className="text-xs uppercase tracking-[0.25em] text-text-muted/70">
+              <p className="text-xs uppercase tracking-[0.25em] text-ink-muted">
                 One more thing
               </p>
-              <h1 className="mt-4 font-serif text-3xl sm:text-4xl md:text-5xl font-light leading-[1.15] tracking-tight text-cream">
+              <h1 className="mt-4 font-serif text-3xl sm:text-4xl md:text-5xl font-light leading-[1.15] tracking-tight text-ink">
                 Want events, venues, and advocacy in your inbox?
               </h1>
-              <p className="mt-5 text-base text-text-muted leading-relaxed">
+              <p className="mt-5 text-base text-ink-muted leading-relaxed">
                 One note a month. Events near you, venues worth knowing, and how cannabis is moving
                 forward in New Jersey. No spam. Unsubscribe anytime.
               </p>
@@ -107,7 +107,7 @@ export default function SubscribeStep({ surveyResponseId, initialEmail, onDone }
                 <div>
                   <label
                     htmlFor="first_name"
-                    className="block text-sm text-text-muted/80 mb-2"
+                    className="block text-sm text-ink-muted mb-2"
                   >
                     First name
                   </label>
@@ -119,11 +119,11 @@ export default function SubscribeStep({ surveyResponseId, initialEmail, onDone }
                     maxLength={50}
                     autoComplete="given-name"
                     placeholder="Jorge"
-                    className="w-full rounded-2xl border border-fern/25 bg-card/30 px-5 py-4 text-cream placeholder:text-text-muted/40 focus:border-glow/60 focus:outline-none transition-colors duration-500 text-base"
+                    className="w-full rounded-2xl border border-sage/40 bg-cream-warm/70 px-5 py-4 text-ink placeholder:text-ink-muted focus:border-forest focus:outline-none transition-colors duration-500 text-base"
                   />
                 </div>
                 <div>
-                  <label htmlFor="subscribe_email" className="block text-sm text-text-muted/80 mb-2">
+                  <label htmlFor="subscribe_email" className="block text-sm text-ink-muted mb-2">
                     Email
                   </label>
                   <input
@@ -135,13 +135,13 @@ export default function SubscribeStep({ surveyResponseId, initialEmail, onDone }
                     autoComplete="email"
                     required
                     placeholder="you@gmail.com"
-                    className="w-full rounded-2xl border border-fern/25 bg-card/30 px-5 py-4 text-cream placeholder:text-text-muted/40 focus:border-glow/60 focus:outline-none transition-colors duration-500 text-base"
+                    className="w-full rounded-2xl border border-sage/40 bg-cream-warm/70 px-5 py-4 text-ink placeholder:text-ink-muted focus:border-forest focus:outline-none transition-colors duration-500 text-base"
                   />
                 </div>
               </div>
 
               {error && (
-                <p className="mt-4 text-sm text-terracotta" role="alert">
+                <p className="mt-4 text-sm text-tobacco" role="alert">
                   {error}
                 </p>
               )}
@@ -151,7 +151,7 @@ export default function SubscribeStep({ surveyResponseId, initialEmail, onDone }
                   type="button"
                   onClick={onDone}
                   disabled={loading}
-                  className="text-sm text-text-muted hover:text-cream transition-colors disabled:opacity-40"
+                  className="text-sm text-ink-muted hover:text-ink transition-colors disabled:opacity-40"
                 >
                   Skip
                 </button>
@@ -159,7 +159,7 @@ export default function SubscribeStep({ surveyResponseId, initialEmail, onDone }
                   type="button"
                   onClick={handleSubmit}
                   disabled={loading || !email}
-                  className="rounded-full bg-moss hover:bg-fern transition-colors duration-500 px-7 py-3 text-cream font-medium disabled:opacity-40 disabled:pointer-events-none"
+                  className="rounded-full bg-forest hover:bg-ink transition-colors duration-500 px-7 py-3 text-cream font-medium disabled:opacity-40 disabled:pointer-events-none"
                 >
                   {loading ? "Signing you up…" : "Count me in"}
                 </button>
@@ -179,7 +179,7 @@ export default function SubscribeStep({ surveyResponseId, initialEmail, onDone }
         </div>
       </div>
 
-      <footer className="px-6 pb-10 sm:px-10 text-center text-xs text-text-muted/50">
+      <footer className="px-6 pb-10 sm:px-10 text-center text-xs text-ink-muted">
         Where connection grows · New Jersey
       </footer>
     </main>
