@@ -64,14 +64,14 @@ export default function AgeGate() {
       className="fixed inset-0 z-[9999] bg-forest-deep/95 backdrop-blur-md flex items-center justify-center p-6"
     >
       <div className="max-w-md w-full bg-card border border-fern/30 rounded-3xl p-8 sm:p-10 text-center shadow-2xl shadow-black/60 animate-settle">
-        <div className="mx-auto mb-6 rounded-2xl bg-cream p-3.5 w-[108px] shadow-[0_12px_40px_-16px_rgba(0,0,0,0.7)]">
+        <div className="mx-auto mb-5 w-[82px]">
           <Image
-            src="/logo.png"
-            alt="Tomoverde"
-            width={320}
-            height={320}
+            src="/logo-mark-cream.png"
+            alt=""
+            width={760}
+            height={580}
             priority
-            className="w-full h-auto"
+            className="w-full h-auto opacity-95"
           />
         </div>
         <p className="text-[11px] tracking-[0.22em] uppercase text-glow font-medium">

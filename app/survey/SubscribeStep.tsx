@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
@@ -59,9 +60,12 @@ export default function SubscribeStep({ surveyResponseId, initialEmail, onDone }
     <main className="min-h-screen flex flex-col">
       <header className="px-6 pt-10 sm:px-10 sm:pt-12">
         <Link href="/" className="inline-flex items-center gap-2.5">
-          <span
-            aria-hidden
-            className="inline-block w-2.5 h-2.5 rounded-full bg-glow animate-breathe"
+          <Image
+            src="/logo-mark-cream.png"
+            alt=""
+            width={760}
+            height={580}
+            className="w-7 h-auto opacity-95"
           />
           <span className="font-serif text-xl tracking-tight text-cream">Tomoverde</span>
         </Link>
