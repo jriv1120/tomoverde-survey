@@ -59,14 +59,6 @@ export default function Thanks() {
               >
                 @tomoverde.co on IG
               </a>
-              <a
-                href="https://www.tiktok.com/@tomoverde"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-sage/60 hover:border-forest hover:bg-cream-warm/60 transition-all duration-500 px-5 py-2.5 text-sm text-ink"
-              >
-                TikTok
-              </a>
               <button
                 type="button"
                 onClick={copy}
