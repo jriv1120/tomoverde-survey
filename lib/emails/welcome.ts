@@ -31,7 +31,7 @@ export function welcomeEmailHtml(firstName?: string): string {
           <tr>
             <td style="padding:0 0 28px;">
               <h1 style="margin:0;font-size:32px;line-height:1.2;color:#1f1c18;font-weight:400;letter-spacing:-0.02em;font-family:Georgia,'Times New Roman',serif;">
-                You're in. Welcome to Tomoverde.
+                Welcome to Tomoverde.
               </h1>
             </td>
           </tr>
@@ -45,14 +45,14 @@ export function welcomeEmailHtml(firstName?: string): string {
           <tr>
             <td style="padding:0 0 20px;">
               <p style="margin:0;font-size:17px;line-height:1.6;color:#1f1c18;">
-                <em>Tomo</em> means friendship. <em>Verde</em> means green. We're building the cannabis community New Jersey deserves &mdash; one where connection matters more than the transaction.
+                Thanks for jumping in. We're early, which means your two cents actually moves the needle.
               </p>
             </td>
           </tr>
           <tr>
             <td style="padding:0 0 12px;">
               <p style="margin:0;font-size:17px;line-height:1.6;color:#1f1c18;">
-                Here's what we'll send you:
+                What to expect, once a month:
               </p>
             </td>
           </tr>
@@ -61,17 +61,17 @@ export function welcomeEmailHtml(firstName?: string): string {
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td style="padding:8px 0;font-size:16px;line-height:1.6;color:#1f1c18;">
-                    &mdash; <strong>Events &amp; experiences</strong> worth your time. Curated, not a firehose.
+                    &mdash; Events worth showing up to.
                   </td>
                 </tr>
                 <tr>
                   <td style="padding:8px 0;font-size:16px;line-height:1.6;color:#1f1c18;">
-                    &mdash; <strong>Venues</strong> doing cannabis-friendly right &mdash; the spots locals actually love.
+                    &mdash; Venues that get cannabis right.
                   </td>
                 </tr>
                 <tr>
                   <td style="padding:8px 0;font-size:16px;line-height:1.6;color:#1f1c18;">
-                    &mdash; <strong>How cannabis is moving forward</strong> &mdash; policy, advocacy, and the stories behind the culture.
+                    &mdash; What's happening on policy, in plain English.
                   </td>
                 </tr>
               </table>
@@ -80,7 +80,7 @@ export function welcomeEmailHtml(firstName?: string): string {
           <tr>
             <td style="padding:0 0 24px;">
               <p style="margin:0;font-size:17px;line-height:1.6;color:#1f1c18;">
-                One note a month. Sometimes two if something real is happening. Never more.
+                Maybe twice if something worth telling you pops off. Never more.
               </p>
             </td>
           </tr>
@@ -90,7 +90,7 @@ export function welcomeEmailHtml(firstName?: string): string {
                 <tr>
                   <td style="padding:0 0 0 20px;">
                     <p style="margin:0;font-size:16px;line-height:1.6;color:#1f1c18;">
-                      <strong>One favor:</strong> hit reply and tell us what kind of event you'd actually show up to. We read every response, and the early community shapes everything that comes next.
+                      Do us a favor: hit reply and tell us what kind of event you'd actually show up to. Real answer, one sentence, whatever. We read all of it.
                     </p>
                   </td>
                 </tr>
@@ -98,16 +98,9 @@ export function welcomeEmailHtml(firstName?: string): string {
             </td>
           </tr>
           <tr>
-            <td style="padding:0 0 6px;">
-              <p style="margin:0;font-size:17px;line-height:1.6;color:#1f1c18;">
-                Welcome home,
-              </p>
-            </td>
-          </tr>
-          <tr>
             <td style="padding:0 0 48px;">
               <p style="margin:0;font-size:17px;line-height:1.6;color:#1f1c18;font-family:Georgia,'Times New Roman',serif;font-style:italic;">
-                &mdash; Tomoverde team
+                &mdash; Tomoverde Team
               </p>
             </td>
           </tr>
@@ -117,7 +110,7 @@ export function welcomeEmailHtml(firstName?: string): string {
                 Tomoverde &middot; Where connection grows &middot; New Jersey
               </p>
               <p style="margin:10px 0 0;font-size:13px;line-height:1.5;color:#a49f94;">
-                You're getting this because you joined the Tomoverde community. Don't want these? <a href="{{RESEND_UNSUBSCRIBE_URL}}" style="color:#2e3a2a;text-decoration:underline;">Unsubscribe</a>.
+                You're getting this because you joined the Tomoverde community. Don't want these? <a href="mailto:hello@tomoverde.com?subject=unsubscribe" style="color:#2e3a2a;text-decoration:underline;">Reply to unsubscribe</a>.
               </p>
             </td>
           </tr>
@@ -133,23 +126,22 @@ export function welcomeEmailText(firstName?: string): string {
   const greeting = firstName ? `Hey ${firstName},` : "Hey friend,";
   return `${greeting}
 
-You're in. Welcome to Tomoverde.
+Welcome to Tomoverde.
 
-Tomo means friendship. Verde means green. We're building the cannabis community New Jersey deserves — one where connection matters more than the transaction.
+Thanks for jumping in. We're early, which means your two cents actually moves the needle.
 
-Here's what we'll send you:
+What to expect, once a month:
 
-— Events & experiences worth your time. Curated, not a firehose.
-— Venues doing cannabis-friendly right — the spots locals actually love.
-— How cannabis is moving forward — policy, advocacy, and the stories behind the culture.
+— Events worth showing up to.
+— Venues that get cannabis right.
+— What's happening on policy, in plain English.
 
-One note a month. Sometimes two if something real is happening. Never more.
+Maybe twice if something worth telling you pops off. Never more.
 
-One favor: hit reply and tell us what kind of event you'd actually show up to. We read every response, and the early community shapes everything that comes next.
+Do us a favor: hit reply and tell us what kind of event you'd actually show up to. Real answer, one sentence, whatever. We read all of it.
 
-Welcome home,
-— Tomoverde team
+— Tomoverde Team
 
 Tomoverde · Where connection grows · New Jersey
-Unsubscribe: {{RESEND_UNSUBSCRIBE_URL}}`;
+Reply with "unsubscribe" to hello@tomoverde.com to stop receiving these.`;
 }

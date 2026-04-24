@@ -11,7 +11,7 @@ export function getResend(): Resend | null {
 }
 
 export const RESEND_CONFIG = {
-  from: process.env.RESEND_FROM_EMAIL || "Tomoverde <onboarding@resend.dev>",
-  replyTo: process.env.RESEND_REPLY_TO || "jriv1120@gmail.com",
+  from: process.env.RESEND_FROM_EMAIL || "Tomoverde <hello@tomoverde.com>",
+  replyTo: process.env.RESEND_REPLY_TO || "hello@tomoverde.com",
   audienceId: process.env.RESEND_AUDIENCE_ID || null,
 };

@@ -7,8 +7,6 @@ import { useEffect, useState } from "react";
 export default function Thanks() {
   const [copied, setCopied] = useState(false);
   const [shareUrl, setShareUrl] = useState("");
-  const shareText =
-    "What kind of cannabis event would you actually show up to? Tomoverde wants to know.";
 
   useEffect(() => {
     setShareUrl(`${window.location.origin}/`);
@@ -53,22 +51,12 @@ export default function Thanks() {
             <p className="text-xs text-ink-muted uppercase tracking-[0.25em]">Pass it on</p>
             <div className="flex flex-wrap items-center justify-center gap-3">
               <a
-                href="https://www.instagram.com/tomoverde.io"
+                href="https://www.instagram.com/tomoverde.co"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full border border-sage/60 hover:border-forest hover:bg-cream-warm/60 transition-all duration-500 px-5 py-2.5 text-sm text-ink"
               >
-                @tomoverde.io on IG
-              </a>
-              <a
-                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                  shareText,
-                )}&url=${encodeURIComponent(shareUrl)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-sage/60 hover:border-forest hover:bg-cream-warm/60 transition-all duration-500 px-5 py-2.5 text-sm text-ink"
-              >
-                Share on X
+                @tomoverde.co on IG
               </a>
               <a
                 href="https://www.tiktok.com/@tomoverde"
@@ -90,7 +78,7 @@ export default function Thanks() {
 
           <div className="mt-16">
             <Link
-              href="https://www.instagram.com/tomoverde.io"
+              href="https://www.instagram.com/tomoverde.co"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-forest hover:text-ink transition-colors underline underline-offset-4 decoration-forest/40"

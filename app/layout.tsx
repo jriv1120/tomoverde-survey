@@ -32,11 +32,6 @@ export const metadata: Metadata = {
     description: "Tell us what you actually want.",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Tomoverde",
-    description: "Tell us what you actually want.",
-  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

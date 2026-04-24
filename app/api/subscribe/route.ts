@@ -8,7 +8,7 @@ import {
   adminNotificationText,
 } from "@/lib/emails/admin-notification";
 
-const ADMIN_EMAIL = "jriv1120@gmail.com";
+const ADMIN_EMAIL = "hello@tomoverde.com";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -115,8 +115,8 @@ export async function POST(req: NextRequest) {
         html: welcomeEmailHtml(cleanFirstName ?? undefined),
         text: welcomeEmailText(cleanFirstName ?? undefined),
         headers: {
-          "List-Unsubscribe": "<{{RESEND_UNSUBSCRIBE_URL}}>",
-          "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+          "List-Unsubscribe":
+            "<mailto:hello@tomoverde.com?subject=unsubscribe>",
         },
       }),
     );

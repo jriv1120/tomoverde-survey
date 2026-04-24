@@ -22,10 +22,9 @@ export default function Survey() {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [hydrated, setHydrated] = useState(false);
-  const [postSubmit, setPostSubmit] = useState<{
-    id: string | null;
-    email: string;
-  } | null>(null);
+  const [postSubmit, setPostSubmit] = useState<{ id: string | null } | null>(
+    null,
+  );
   const honeypotRef = useRef<HTMLInputElement>(null);
   const advanceTimerRef = useRef<number | null>(null);
   const stashedDraftRef = useRef<Draft | null>(null);
@@ -122,9 +121,7 @@ export default function Survey() {
         } catch {
           /* noop */
         }
-        const givenEmail =
-          typeof finalAnswers.email === "string" ? finalAnswers.email.trim() : "";
-        setPostSubmit({ id: data.id ?? null, email: givenEmail });
+        setPostSubmit({ id: data.id ?? null });
       } catch (e) {
         setSubmitError(
           e instanceof Error ? e.message : "Something went wrong. Try again.",
@@ -196,7 +193,6 @@ export default function Survey() {
     return (
       <SubscribeStep
         surveyResponseId={postSubmit.id}
-        initialEmail={postSubmit.email}
         onDone={() => router.push("/thanks")}
       />
     );

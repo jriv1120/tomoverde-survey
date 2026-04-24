@@ -193,16 +193,6 @@ export const QUESTIONS: Question[] = [
     placeholder: "07030",
     optional: true,
   },
-  {
-    id: "email",
-    column: "email",
-    type: "optional-text",
-    number: 14,
-    prompt: "Drop your email.",
-    subtitle: "You'll be the first to know about events in your area.",
-    placeholder: "you@gmail.com",
-    optional: true,
-  },
 ];
 
 export const TOTAL_QUESTIONS = QUESTIONS.length;

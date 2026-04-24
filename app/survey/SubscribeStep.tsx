@@ -6,15 +6,14 @@ import Link from "next/link";
 
 type Props = {
   surveyResponseId?: string | null;
-  initialEmail?: string;
   onDone: () => void;
 };
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export default function SubscribeStep({ surveyResponseId, initialEmail, onDone }: Props) {
+export default function SubscribeStep({ surveyResponseId, onDone }: Props) {
   const [firstName, setFirstName] = useState("");
-  const [email, setEmail] = useState(initialEmail ?? "");
+  const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [done, setDone] = useState(false);
@@ -93,14 +92,15 @@ export default function SubscribeStep({ surveyResponseId, initialEmail, onDone }
           ) : (
             <>
               <p className="text-xs uppercase tracking-[0.25em] text-ink-muted">
-                One more thing
+                Thanks for sharing
               </p>
               <h1 className="mt-4 font-serif text-3xl sm:text-4xl md:text-5xl font-light leading-[1.15] tracking-tight text-ink">
-                Want events, venues, and advocacy in your inbox?
+                Want to be the first to know when we launch?
               </h1>
               <p className="mt-5 text-base text-ink-muted leading-relaxed">
-                One note a month. Events near you, venues worth knowing, and how cannabis is moving
-                forward in New Jersey. No spam. Unsubscribe anytime.
+                Leave your email and we&rsquo;ll send one note a month &mdash; events near you,
+                venues worth knowing, and how cannabis is moving forward in New Jersey. No spam.
+                Unsubscribe anytime.
               </p>
 
               <div className="mt-10 space-y-4">
