@@ -74,7 +74,7 @@ export default function AgeGate() {
         <p className="text-[11px] tracking-[0.22em] uppercase text-forest font-medium">
           Tomoverde
         </p>
-        <p className="mt-1 text-xs text-ink-muted italic">Where connection grows.</p>
+        <p className="mt-1 text-xs text-ink-muted italic">Discover Green Together.</p>
 
         {!declined ? (
           <>

@@ -24,7 +24,7 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Tomoverde — Where connection grows.",
+  title: "Tomoverde — Discover Green Together.",
   description:
     "New Jersey's green scene, built by people who know hospitality. Events, venues, and a community worth showing up for.",
   openGraph: {

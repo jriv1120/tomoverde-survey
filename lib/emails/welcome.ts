@@ -25,7 +25,7 @@ export function welcomeEmailHtml(firstName?: string): string {
           <tr>
             <td style="padding-bottom:32px;">
               <p style="margin:0;font-size:13px;letter-spacing:0.22em;text-transform:uppercase;color:#2e3a2a;font-weight:600;">Tomoverde</p>
-              <p style="margin:6px 0 0;font-size:14px;color:#a49f94;font-style:italic;">Where connection grows.</p>
+              <p style="margin:6px 0 0;font-size:14px;color:#a49f94;font-style:italic;">Discover Green Together.</p>
             </td>
           </tr>
           <tr>
@@ -107,7 +107,7 @@ export function welcomeEmailHtml(firstName?: string): string {
           <tr>
             <td style="border-top:1px solid #ebe3d0;padding-top:24px;">
               <p style="margin:0;font-size:13px;line-height:1.5;color:#a49f94;">
-                Tomoverde &middot; Where connection grows &middot; New Jersey
+                Tomoverde &middot; Discover Green Together &middot; New Jersey
               </p>
               <p style="margin:10px 0 0;font-size:13px;line-height:1.5;color:#a49f94;">
                 You're getting this because you joined the Tomoverde community. Don't want these? <a href="mailto:hello@tomoverde.com?subject=unsubscribe" style="color:#2e3a2a;text-decoration:underline;">Reply to unsubscribe</a>.
@@ -142,6 +142,6 @@ Do us a favor: hit reply and tell us what kind of event you'd actually show up t
 
 — Tomoverde Team
 
-Tomoverde · Where connection grows · New Jersey
+Tomoverde · Discover Green Together · New Jersey
 Reply with "unsubscribe" to hello@tomoverde.com to stop receiving these.`;
 }

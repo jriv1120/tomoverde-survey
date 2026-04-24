@@ -22,7 +22,7 @@ export default function Home() {
             Tomoverde
           </p>
           <p className="mt-2 font-serif italic text-sm sm:text-base text-ink-muted tracking-wide">
-            Where connection grows.
+            Discover Green Together.
           </p>
 
           <h1 className="mt-12 sm:mt-14 font-serif text-5xl sm:text-6xl md:text-7xl font-light leading-[1.05] tracking-tight text-ink">

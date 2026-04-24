@@ -69,7 +69,7 @@ export default async function OG() {
             fontStyle: "italic",
           }}
         >
-          Where connection grows.
+          Discover Green Together.
         </div>
       </div>
     ),
