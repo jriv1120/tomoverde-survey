@@ -36,7 +36,7 @@ export default function Home() {
           </p>
 
           <p className="mt-6 text-base text-ink-muted leading-relaxed max-w-md mx-auto">
-            Fourteen quick questions. Your answers shape every event we put on.
+            Thirteen quick questions. Your answers shape every event we put on.
           </p>
 
           <div className="mt-14">
