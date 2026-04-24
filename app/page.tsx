@@ -7,14 +7,14 @@ export default function Home() {
     <main className="min-h-screen flex flex-col">
       <div className="flex-1 flex items-center justify-center px-6 sm:px-10 py-16">
         <div className="max-w-2xl w-full text-center animate-settle">
-          <div className="mx-auto mb-8 w-[200px] sm:w-[240px]">
+          <div className="mx-auto mb-8 w-[320px] sm:w-[400px]">
             <Image
               src="/logo.png"
               alt="Tomoverde — Discover Green Together"
               width={760}
               height={580}
               priority
-              className="w-full h-auto"
+              className="w-full h-auto mix-blend-multiply"
             />
           </div>
 

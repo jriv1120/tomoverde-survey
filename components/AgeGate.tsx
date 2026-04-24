@@ -61,14 +61,14 @@ export default function AgeGate() {
       className="fixed inset-0 z-[9999] bg-ink/70 backdrop-blur-md flex items-center justify-center p-6"
     >
       <div className="max-w-md w-full bg-cream border border-sage/40 rounded-3xl p-8 sm:p-10 text-center shadow-2xl shadow-ink/40 animate-settle">
-        <div className="mx-auto mb-4 w-[160px]">
+        <div className="mx-auto mb-4 w-[200px]">
           <Image
             src="/logo.png"
             alt="Tomoverde — Discover Green Together"
             width={760}
             height={580}
             priority
-            className="w-full h-auto"
+            className="w-full h-auto mix-blend-multiply"
           />
         </div>
 
