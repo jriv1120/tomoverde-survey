@@ -68,7 +68,7 @@ export default function AgeGate() {
             width={760}
             height={580}
             priority
-            className="w-full h-auto mix-blend-multiply"
+            className="w-full h-auto"
           />
         </div>
 
