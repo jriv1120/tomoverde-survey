@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Tomoverde — Where connection grows.",
   description:
-    "Tomo means friendship. Verde means green. We're building a cannabis community that feels like coming home, not a transaction.",
+    "New Jersey's green scene, built by people who know hospitality. Events, venues, and a community worth showing up for.",
   openGraph: {
     title: "Tomoverde",
     description: "Tell us what you actually want.",

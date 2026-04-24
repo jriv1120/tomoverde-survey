@@ -100,8 +100,8 @@ export default function SubscribeStep({ surveyResponseId, onDone }: Props) {
               </h1>
               <p className="mt-5 text-base text-ink-muted leading-relaxed">
                 Leave your email and we&rsquo;ll send one note a month &mdash; events near you,
-                venues worth knowing, and how cannabis is moving forward in New Jersey. No spam.
-                Unsubscribe anytime.
+                venues worth knowing, and how the green scene is moving forward in New Jersey.
+                No spam. Unsubscribe anytime.
               </p>
 
               <div className="mt-10 space-y-4">

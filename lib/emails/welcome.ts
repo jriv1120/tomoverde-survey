@@ -66,7 +66,7 @@ export function welcomeEmailHtml(firstName?: string): string {
                 </tr>
                 <tr>
                   <td style="padding:8px 0;font-size:16px;line-height:1.6;color:#1f1c18;">
-                    &mdash; Venues that get cannabis right.
+                    &mdash; Venues that do green right.
                   </td>
                 </tr>
                 <tr>
@@ -133,7 +133,7 @@ Thanks for jumping in. We're early, which means your two cents actually moves th
 What to expect, once a month:
 
 — Events worth showing up to.
-— Venues that get cannabis right.
+— Venues that do green right.
 — What's happening on policy, in plain English.
 
 Maybe twice if something worth telling you pops off. Never more.
