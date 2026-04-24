@@ -9,7 +9,7 @@ export default function Home() {
         <div className="max-w-2xl w-full text-center animate-settle">
           <div className="mx-auto mb-4 w-[96px] sm:w-[112px]">
             <Image
-              src="/logo-mark-dark.png"
+              src="/logo.png"
               alt=""
               width={760}
               height={580}

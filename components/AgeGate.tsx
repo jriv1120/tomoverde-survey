@@ -63,7 +63,7 @@ export default function AgeGate() {
       <div className="max-w-md w-full bg-cream border border-sage/40 rounded-3xl p-8 sm:p-10 text-center shadow-2xl shadow-ink/40 animate-settle">
         <div className="mx-auto mb-5 w-[96px]">
           <Image
-            src="/logo-mark-dark.png"
+            src="/logo.png"
             alt=""
             width={760}
             height={580}
