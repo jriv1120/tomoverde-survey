@@ -7,6 +7,8 @@ import {
   adminNotificationSubject,
   adminNotificationText,
 } from "@/lib/emails/admin-notification";
+import { checkRateLimit } from "@/lib/rate-limit";
+import { isAllowedOrigin } from "@/lib/same-origin";
 
 const ADMIN_EMAIL = "hello@tomoverde.com";
 
@@ -25,6 +27,22 @@ interface SubscribePayload {
 }
 
 export async function POST(req: NextRequest) {
+  if (!isAllowedOrigin(req)) {
+    return NextResponse.json({ ok: false, error: "Forbidden" }, { status: 403 });
+  }
+
+  const rl = await checkRateLimit(req, {
+    endpoint: "subscribe",
+    limit: 5,
+    windowSeconds: 60,
+  });
+  if (!rl.allowed) {
+    return NextResponse.json(
+      { ok: false, error: "Too many requests. Try again in a minute." },
+      { status: 429, headers: { "Retry-After": String(rl.retryAfterSeconds ?? 60) } },
+    );
+  }
+
   let body: SubscribePayload;
   try {
     body = (await req.json()) as SubscribePayload;

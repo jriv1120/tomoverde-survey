@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import DisclosureFooter from "@/components/DisclosureFooter";
 
 export default function Thanks() {
   const [copied, setCopied] = useState(false);
@@ -89,9 +90,7 @@ export default function Thanks() {
         </div>
       </div>
 
-      <footer className="px-6 pb-10 sm:px-10 text-center text-xs text-ink-muted">
-        Where connection grows · New Jersey
-      </footer>
+      <DisclosureFooter />
     </main>
   );
 }

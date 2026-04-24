@@ -109,6 +109,11 @@ export default function AgeGate() {
             <p className="mt-7 text-xs text-ink-muted leading-relaxed">
               By entering, you confirm you&rsquo;re of legal age in your state.
             </p>
+            <p className="mt-4 text-[11px] text-ink-muted/80 leading-relaxed">
+              Cannabis has not been evaluated by the FDA. Keep out of reach of
+              children and pets. Do not operate vehicles or machinery under the
+              influence. For use only by adults 21 and older.
+            </p>
           </>
         ) : (
           <>

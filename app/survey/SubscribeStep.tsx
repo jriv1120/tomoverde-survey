@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import DisclosureFooter from "@/components/DisclosureFooter";
 
 type Props = {
   surveyResponseId?: string | null;
@@ -179,9 +180,7 @@ export default function SubscribeStep({ surveyResponseId, onDone }: Props) {
         </div>
       </div>
 
-      <footer className="px-6 pb-10 sm:px-10 text-center text-xs text-ink-muted">
-        Where connection grows · New Jersey
-      </footer>
+      <DisclosureFooter />
     </main>
   );
 }

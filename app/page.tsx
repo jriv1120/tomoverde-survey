@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import DisclosureFooter from "@/components/DisclosureFooter";
 
 export default function Home() {
   return (
@@ -51,9 +52,7 @@ export default function Home() {
         </div>
       </div>
 
-      <footer className="px-6 pb-10 sm:px-10 text-center text-xs text-ink-muted">
-        Where connection grows · New Jersey
-      </footer>
+      <DisclosureFooter />
     </main>
   );
 }
