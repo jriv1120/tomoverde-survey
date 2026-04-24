@@ -7,10 +7,10 @@ export default function Home() {
     <main className="min-h-screen flex flex-col">
       <div className="flex-1 flex items-center justify-center px-6 sm:px-10 py-16">
         <div className="max-w-2xl w-full text-center animate-settle">
-          <div className="mx-auto mb-4 w-[96px] sm:w-[112px]">
+          <div className="mx-auto mb-8 w-[200px] sm:w-[240px]">
             <Image
               src="/logo.png"
-              alt=""
+              alt="Tomoverde — Discover Green Together"
               width={760}
               height={580}
               priority
@@ -18,14 +18,7 @@ export default function Home() {
             />
           </div>
 
-          <p className="font-serif text-xl sm:text-2xl text-forest tracking-[0.22em] uppercase">
-            Tomoverde
-          </p>
-          <p className="mt-2 font-serif italic text-sm sm:text-base text-ink-muted tracking-wide">
-            Discover Green Together.
-          </p>
-
-          <h1 className="mt-12 sm:mt-14 font-serif text-5xl sm:text-6xl md:text-7xl font-light leading-[1.05] tracking-tight text-ink">
+          <h1 className="mt-10 sm:mt-12 font-serif text-5xl sm:text-6xl md:text-7xl font-light leading-[1.05] tracking-tight text-ink">
             Tell us what you{" "}
             <em className="text-forest not-italic font-serif italic">actually</em> want.
           </h1>

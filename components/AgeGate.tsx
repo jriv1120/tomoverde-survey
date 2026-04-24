@@ -61,20 +61,16 @@ export default function AgeGate() {
       className="fixed inset-0 z-[9999] bg-ink/70 backdrop-blur-md flex items-center justify-center p-6"
     >
       <div className="max-w-md w-full bg-cream border border-sage/40 rounded-3xl p-8 sm:p-10 text-center shadow-2xl shadow-ink/40 animate-settle">
-        <div className="mx-auto mb-5 w-[96px]">
+        <div className="mx-auto mb-4 w-[160px]">
           <Image
             src="/logo.png"
-            alt=""
+            alt="Tomoverde — Discover Green Together"
             width={760}
             height={580}
             priority
             className="w-full h-auto"
           />
         </div>
-        <p className="text-[11px] tracking-[0.22em] uppercase text-forest font-medium">
-          Tomoverde
-        </p>
-        <p className="mt-1 text-xs text-ink-muted italic">Discover Green Together.</p>
 
         {!declined ? (
           <>

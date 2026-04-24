@@ -215,7 +215,7 @@ export default function Survey() {
       <header className="px-6 pt-10 sm:px-10 sm:pt-12 flex items-center justify-between">
         <Link href="/" className="inline-flex items-center gap-2.5">
           <Image
-            src="/logo.png"
+            src="/logo-mark-dark.png"
             alt=""
             width={760}
             height={580}
