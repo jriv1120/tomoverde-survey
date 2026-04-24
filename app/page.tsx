@@ -31,8 +31,8 @@ export default function Home() {
           </h1>
 
           <p className="mt-8 font-serif text-lg sm:text-xl text-ink/75 leading-relaxed max-w-xl mx-auto font-light">
-            Tomo means friendship. Verde means green. We&rsquo;re building a cannabis community
-            that feels like coming home, not a transaction.
+            Cannabis in New Jersey, built by people who know hospitality. Events worth your
+            time, venues worth knowing, and a scene that&rsquo;s actually fun to be part of.
           </p>
 
           <p className="mt-6 text-base text-ink-muted leading-relaxed max-w-md mx-auto">
